@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Статья</title>
+		
+</head>
+<body>
+	<div class="header">
+	<img src="{% static 'img1_252.png' %}" alt="Логотип" type="image/png"/>
+	</div>
+	<div class="archive">
+		
+		<div class="one-post">
+			<h2 class="post-title">{{ post.title }}</h2>
+			<div class="article-info">
+				<div class="article-author">{{ post.author.username }}</div>
+				<div class="article-createddate">{{ post.created_date}}</div>
+			</div>
+			<p class="article-text">{{ post.get_excerpt }}</p>
+		</div>
+		
+	</div>
+</body>
+</html>
